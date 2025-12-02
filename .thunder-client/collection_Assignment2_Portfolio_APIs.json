@@ -1,0 +1,157 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "COMP229 Assignment2 - Portfolio APIs",
+  "dateExported": "2025-10-27T22:21:11.220414Z",
+  "version": "1.0",
+  "folders": [],
+  "requests": [
+    {
+      "name": "Health",
+      "method": "GET",
+      "url": "http://localhost:5000/",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Contacts - GET all",
+      "method": "GET",
+      "url": "http://localhost:5000/api/contacts",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Contacts - POST create",
+      "method": "POST",
+      "url": "http://localhost:5000/api/contacts",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"firstname\": \"Ramika\", \"lastname\": \"Dayananda\", \"email\": \"ramika@example.com\"}"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Projects - GET all",
+      "method": "GET",
+      "url": "http://localhost:5000/api/projects",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Qualifications - GET all",
+      "method": "GET",
+      "url": "http://localhost:5000/api/qualifications",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Users - GET all",
+      "method": "GET",
+      "url": "http://localhost:5000/api/users",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Auth - Register",
+      "method": "POST",
+      "url": "http://localhost:5000/api/auth/register",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"name\": \"Test User\", \"email\": \"test@example.com\", \"password\": \"Passw0rd!\"}"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Auth - Login",
+      "method": "POST",
+      "url": "http://localhost:5000/api/auth/login",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\"email\": \"test@example.com\", \"password\": \"Passw0rd!\"}"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Auth - Me (Bearer token)",
+      "method": "GET",
+      "url": "http://localhost:5000/api/auth/me",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{token}}"
+        }
+      ],
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Auth - Logout",
+      "method": "POST",
+      "url": "http://localhost:5000/api/auth/logout",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
