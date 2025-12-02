@@ -20,7 +20,6 @@ import { notFound, errorHandler } from './backend/middleware/errorHandler.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
 
 // ESM __dirname helper
 const __filename = fileURLToPath(import.meta.url);
@@ -36,8 +35,17 @@ app.use('/uploads', express.static(uploadsDir));
 // connect to DB
 await connectDB();
 
+
+// ✅ UPDATED CORS CONFIG
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://assignment4-portfolio-frontend.vercel.app"
+  ],
+  credentials: true
+}));
+
 // middleware
-app.use(cors({ origin: CLIENT_URL, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('dev'));
